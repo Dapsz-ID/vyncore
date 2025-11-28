@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyncore - Platform Kebutuhan Sosial Media Anda</title>
+    <link rel="icon" href="https://files.catbox.moe/c1pcnw.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://files.catbox.moe/c1pcnw.png" alt="Vyncore Logo">
+            </div>
+            <div class="brand">Vyncore</div>
+        </div>
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="#" class="nav-link" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="downloader">TikTok Downloader</a>
+            <a href="#" class="nav-link" data-page="about">About</a>
+            <a href="#" class="nav-link" data-page="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="mobile-nav-link" data-page="home">Home</a>
+        <a href="#" class="mobile-nav-link" data-page="downloader">TikTok Downloader</a>
+        <a href="#" class="mobile-nav-link" data-page="about">About</a>
+        <a href="#" class="mobile-nav-link" data-page="contact">Contact</a>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>Vyncore – Solusi Kebutuhan Sosial Media Anda</h1>
+            <p>Platform lengkap untuk kebutuhan sosial media Anda</p>
+            
+            
+            <div class="message-box">
+                <p>Untuk Melanjutkan, Silahkan Klik <span class="highlight">Garis tiga di kanan atas</span>, Terimakasih</p>
+            </div>
+        </section>
+
+        <!-- TikTok Downloader Section -->
+        <section class="downloader-section" id="downloader">
+            <h2><i class="fab fa-tiktok"></i> TikTok Downloader</h2>
+            <div class="input-group">
+                <input type="url" class="url-input" id="tiktokUrl" placeholder="Masukkan URL TikTok..." required>
+                <button class="download-btn" id="fetchBtn">
+                    <i class="fas fa-download"></i> Download
+                </button>
+            </div>
+            
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Mengambil data video...</p>
+            </div>
+
+            <div class="result-container" id="resultContainer">
+                <div class="video-info">
+                    <img id="videoThumbnail" class="thumbnail" src="" alt="Video Thumbnail">
+                    <div class="info-details">
+                        <h3 id="videoTitle"></h3>
+                        <div class="info-item">
+                            <span class="info-label">Author:</span>
+                            <span class="info-value" id="videoAuthor"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Upload Date:</span>
+                            <span class="info-value" id="uploadDate"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Region:</span>
+                            <span class="info-value" id="region"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Duration:</span>
+                            <span class="info-value" id="duration"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Music:</span>
+                            <span class="info-value" id="musicTitle"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-options" id="downloadOptions">
+                    <!-- Download buttons will be added here dynamically -->
+                </div>
+
+                <div class="music-download">
+                    <h3><i class="fas fa-music"></i> Download Music</h3>
+                    <button class="music-btn" id="downloadMusicBtn">
+                        <i class="fas fa-download"></i> Download Music (MP3)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <h2>About Vyncore Store</h2>
+            <p>Vyncore Store adalah penyedia layanan digital yang berfokus pada Panel Pterodactyl, Cloud Hosting, dan solusi infrastruktur server yang dirancang agar mudah, cepat, dan sepenuhnya dapat diandalkan. Didirikan oleh <strong>Dapsz-ID</strong>, kami berkomitmen menghadirkan platform yang memberikan kebebasan dan kendali penuh kepada setiap pengguna yang ingin membangun server game, bot, website, atau proyek digital lainnya.</p>
+            
+            <p>Kami percaya bahwa teknologi harus dapat diakses oleh semua orang — itulah alasan Vyncore Store mengedepankan layanan yang user-friendly, terjangkau, dan berperforma tinggi. Setiap server dioptimalkan dengan standar keamanan modern, uptime maksimal, serta panel kontrol yang sederhana namun powerful.</p>
+            
+            <p>Di Vyncore Store, kami tidak hanya menyediakan layanan — kami menghadirkan sebuah pengalaman hosting yang stabil, aman, dan mendukung kebutuhan digital Anda, kapan saja dan di mana saja.</p>
+            
+            <p>Dengan semangat inovasi dan kualitas, Vyncore Store terus berkembang untuk menjadi mitra terbaik Anda dalam dunia cloud dan infrastruktur digital.</p>
+            
+            <p class="tagline">Vyncore Store - Simple. Fast. Reliable.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
